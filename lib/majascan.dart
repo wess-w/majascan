@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:ffi';
 import 'dart:ui';
 import 'package:flutter/services.dart';
-
 import 'package:flutter/widgets.dart';
 
 class MajaScan {
@@ -12,10 +11,10 @@ class MajaScan {
   static Future<String> startScan({
     String title = "",
     bool flashlightEnable = true,
-    Color barColor,
-    Color titleColor,
-    Color qRCornerColor,
-    Color qRScannerColor,
+    Color? barColor,
+    Color? titleColor,
+    Color? qRCornerColor,
+    Color? qRScannerColor,
     double scanAreaScale = 0.7,
   }) async {
     int flashlight = (flashlightEnable ? 1 : 0);
